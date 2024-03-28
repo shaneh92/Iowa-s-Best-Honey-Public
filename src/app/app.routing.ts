@@ -1,7 +1,27 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-export const routes: Routes = [];
+// App Component Imports
+import { HomeComponent } from './components/home/home.component';
+
+export const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent,
+    children: [
+      {
+        path: '',
+        component: HomeComponent,
+        title: `Iowa's Best Wildflower Honey and Bees`,
+      },
+      {
+        path: 'home',
+        component: HomeComponent,
+        title: `Iowa's Best Wildflower Honey and Bees`,
+      },
+    ],
+  },
+];
 @NgModule({
   // imports the RouterModule and defines the routes array and other options (e.g. useHash, enableTracing, scrollPositionRestoration)
   imports: [
