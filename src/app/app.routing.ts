@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 // App Component Imports
 import { HomeComponent } from './components/home/home.component';
+import { ShopComponent } from './components/shop/shop.component';
 
 export const routes: Routes = [
   {
@@ -17,6 +18,11 @@ export const routes: Routes = [
       {
         path: 'home',
         component: HomeComponent,
+        title: `Iowa's Best Wildflower Honey and Bees`,
+      },
+      {
+        path: 'shop',
+        component: ShopComponent,
         title: `Iowa's Best Wildflower Honey and Bees`,
       },
     ],
