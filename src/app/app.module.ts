@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app.routing';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // App Component Imports
 import { AppComponent } from './app.component';
@@ -57,6 +58,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MdbTabsModule,
     MdbTooltipModule,
     MdbValidationModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
