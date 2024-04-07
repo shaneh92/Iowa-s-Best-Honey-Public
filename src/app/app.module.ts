@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app.routing';
+import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
 // App Component Imports
 import { AppComponent } from './app.component';
+import { BaselayoutComponent } from './layouts/baselayout/baselayout.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { HeaderComponent } from './layouts/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { ShopComponent } from './components/shop/shop.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { UsersComponent } from './components/admin/users/users.component';
+import { ProductsComponent } from './components/admin/products/products.component';
 
 // MDB Modules
 import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
@@ -33,11 +37,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
+    BaselayoutComponent,
     FooterComponent,
     HeaderComponent,
     HomeComponent,
     SignInComponent,
     ShopComponent,
+    AdminComponent,
+    UsersComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,
