@@ -2,13 +2,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 // App Component Imports
+import { BaselayoutComponent } from './layouts/baselayout/baselayout.component';
 import { HomeComponent } from './components/home/home.component';
 import { ShopComponent } from './components/shop/shop.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { UsersComponent } from './components/admin/users/users.component';
 
 export const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: BaselayoutComponent,
     children: [
       {
         path: '',
@@ -24,6 +27,16 @@ export const routes: Routes = [
         path: 'shop',
         component: ShopComponent,
         title: `Iowa's Best Wildflower Honey and Bees`,
+      },
+      {
+        path: 'admin',
+        component: AdminComponent,
+        title: `Admin Portal`,
+      },
+      {
+        path: 'admin/users',
+        component: UsersComponent,
+        title: `Admin Portal: Users`,
       },
     ],
   },
