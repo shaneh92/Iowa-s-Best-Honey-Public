@@ -14,6 +14,7 @@ import { ShopComponent } from './components/shop/shop.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { UsersComponent } from './components/admin/users/users.component';
 import { ProductsComponent } from './components/admin/products/products.component';
+import { OrdersComponent } from './components/admin/orders/orders.component';
 
 // MDB Modules
 import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
@@ -46,6 +47,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AdminComponent,
     UsersComponent,
     ProductsComponent,
+    OrdersComponent,
   ],
   imports: [
     BrowserModule,

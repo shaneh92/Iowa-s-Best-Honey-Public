@@ -7,6 +7,8 @@ import { HomeComponent } from './components/home/home.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { UsersComponent } from './components/admin/users/users.component';
+// import { OrdersComponent } from './components/admin/orders/orders.component';
+// import { ProductsComponent } from './components/admin/products/products.component';
 
 export const routes: Routes = [
   {
@@ -38,6 +40,16 @@ export const routes: Routes = [
         component: UsersComponent,
         title: `Admin Portal: Users`,
       },
+      // {
+      //   path: 'admin/products',
+      //   component: ProductsComponent,
+      //   title: `Admin Portal: Products`,
+      // },
+      // {
+      //   path: 'admin/orders',
+      //   component: OrdersComponent,
+      //   title: `Admin Portal: Orders`,
+      // },
     ],
   },
 ];

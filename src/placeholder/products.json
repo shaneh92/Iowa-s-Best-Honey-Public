@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Honey 8oz",
+    "originalPrice": 10.99,
+    "salePrice": 8.99,
+    "category": "honey",
+    "weight": 8,
+    "description": "This is a jar of 8oz honey.",
+    "image": "../assets/iowabesthoney.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Honey 12oz",
+    "originalPrice": 10.99,
+    "salePrice": 8.99,
+    "category": "honey",
+    "weight": 12,
+    "description": "This is a jar of 12oz honey.",
+    "image": "../assets/beesandhoney.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Hive Box",
+    "originalPrice": 22.99,
+    "salePrice": 19.99,
+    "category": "hive",
+    "weight": 16,
+    "description": "This is a hive box.",
+    "image": "../assets/hiveframe.jpg"
+  }
+]

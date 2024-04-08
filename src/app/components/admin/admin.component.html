@@ -1,25 +1,16 @@
-<div class="p-5 text-center bg-light jumbotron">
-  <h1 class="mb-3">Admin Portal</h1>
+<div class="container-fluid">
+  <div class="p-5 text-center bg-light jumbotron">
+    <h1 class="mb-3">Admin Portal</h1>
+  </div>
+  <mdb-tabs [justified]="true" class="tabs">
+    <mdb-tab title="Employee">
+      <ng-template mdbTabContent><app-users></app-users></ng-template>
+    </mdb-tab>
+    <mdb-tab title="Products">
+      <ng-template mdbTabContent><app-products></app-products></ng-template>
+    </mdb-tab>
+    <mdb-tab title="Orders">
+      <ng-template mdbTabContent> <app-orders></app-orders></ng-template>
+    </mdb-tab>
+  </mdb-tabs>
 </div>
-<mdb-tabs [vertical]="true" class="tabs">
-  <mdb-tab title="Employee">
-    <ng-template mdbTabContent> <app-users></app-users></ng-template>
-  </mdb-tab>
-  <mdb-tab title="Products">
-    <ng-template mdbTabContent><app-products></app-products></ng-template>
-  </mdb-tab>
-  <mdb-tab title="Orders">
-    <ng-template mdbTabContent> Tab content 3 </ng-template>
-  </mdb-tab>
-</mdb-tabs>
-<mdb-tabs class="tabs">
-  <mdb-tab title="Employee">
-    <ng-template mdbTabContent> <app-users></app-users></ng-template>
-  </mdb-tab>
-  <mdb-tab title="Products">
-    <ng-template mdbTabContent><app-products></app-products></ng-template>
-  </mdb-tab>
-  <mdb-tab title="Tab 3">
-    <ng-template mdbTabContent> Tab content 3 </ng-template>
-  </mdb-tab>
-</mdb-tabs>
