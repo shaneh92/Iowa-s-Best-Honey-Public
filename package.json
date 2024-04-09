@@ -3,8 +3,11 @@
   "version": "6.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng build && node ./bin/www",
     "build": "ng build",
+    "server": "nodemon ./bin/www",
+    "client": "ng serve --open",
+    "render-deploy": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -20,8 +23,12 @@
     "@angular/platform-browser-dynamic": "^17.0.7",
     "@angular/router": "^17.0.7",
     "@fortawesome/fontawesome-free": "^6.0.0",
+    "ajv": "^8.12.0",
+    "express": "^4.19.2",
+    "http-errors": "^2.0.0",
     "mdb-angular-ui-kit": "file:mdb-angular-ui-kit-6.0.0.tgz",
     "rxjs": "~7.5.0",
+    "swagger-ui-express": "^5.0.0",
     "tslib": "^2.1.0",
     "zone.js": "~0.14.2"
   },
