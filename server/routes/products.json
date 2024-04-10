@@ -28,5 +28,45 @@
     "weight": 16,
     "description": "This is a hive box.",
     "image": "../assets/hiveframe.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Queen Bee",
+    "originalPrice": 40.0,
+    "salePrice": 38.99,
+    "category": "bees",
+    "weight": 1,
+    "description": "This is a Queen Bee.",
+    "image": "../assets/beeframes.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Queen Excluder",
+    "originalPrice": 9.99,
+    "salePrice": 8.99,
+    "category": "hive",
+    "weight": 6,
+    "description": "This is a Queen Excluder.",
+    "image": "../assets/beehiveopen.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Deep Hive Frame",
+    "originalPrice": 7.99,
+    "salePrice": 7.49,
+    "category": "hive",
+    "weight": 8,
+    "description": "This is a a deep frame.",
+    "image": "../assets/beehives.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Nuc Box",
+    "originalPrice": 180.0,
+    "salePrice": 175.0,
+    "category": "bees",
+    "weight": 34,
+    "description": "This is a a nuc, comes with frames, queen and bees.",
+    "image": "../assets/beehiveopen.jpg"
   }
 ]
