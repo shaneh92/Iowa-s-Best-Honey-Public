@@ -1,4 +1,9 @@
-<table class="table table-hover align-middle mb-0 bg-white">
+<div class="text-center" *ngIf="isLoading">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+<table class="table table-hover align-middle mb-0 bg-white" *ngIf="!isLoading">
   <thead class="table-dark">
     <tr>
       <th>Name</th>
@@ -10,88 +15,29 @@
       <th>Actions</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody *ngFor="let product of products">
     <tr>
       <td>
         <div class="d-flex align-items-center">
-          <img
-            src="https://mdbootstrap.com/img/new/avatars/8.jpg"
+          {{ product.image }}
+          <!-- <img
+            src="`{{ product.image }}`"
             alt=""
             style="width: 45px; height: 45px"
             class="rounded-circle"
-          />
+          /> -->
           <div class="ms-3">
-            <p class="fw-bold mb-1">Honey 10 oz</p>
+            <p class="fw-bold mb-1">{{ product.name }}</p>
           </div>
         </div>
       </td>
       <td>
-        <p class="fw-normal mb-1">10.99</p>
+        <p class="fw-normal mb-1">{{ product.originalPrice | currency }}</p>
       </td>
-      <td>9.99</td>
-      <td>Honey</td>
-      <td>10 Oz</td>
-      <td>Jar of Honey</td>
-      <td>
-        <button type="button" class="btn btn-link btn-sm btn-rounded">
-          Edit
-        </button>
-        <button type="button" class="btn btn-link btn-sm btn-rounded">
-          Delete
-        </button>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="d-flex align-items-center">
-          <img
-            src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-            alt=""
-            style="width: 45px; height: 45px"
-            class="rounded-circle"
-          />
-          <div class="ms-3">
-            <p class="fw-bold mb-1">Honey 10 oz</p>
-          </div>
-        </div>
-      </td>
-      <td>
-        <p class="fw-normal mb-1">10.99</p>
-      </td>
-      <td>9.99</td>
-      <td>Honey</td>
-      <td>10 Oz</td>
-      <td>Jar of Honey</td>
-      <td>
-        <button type="button" class="btn btn-link btn-sm btn-rounded">
-          Edit
-        </button>
-        <button type="button" class="btn btn-link btn-sm btn-rounded">
-          Delete
-        </button>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="d-flex align-items-center">
-          <img
-            src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-            alt=""
-            style="width: 45px; height: 45px"
-            class="rounded-circle"
-          />
-          <div class="ms-3">
-            <p class="fw-bold mb-1">Honey 10 oz</p>
-          </div>
-        </div>
-      </td>
-      <td>
-        <p class="fw-normal mb-1">10.99</p>
-      </td>
-      <td>9.99</td>
-      <td>Honey</td>
-      <td>10 Oz</td>
-      <td>Jar of Honey</td>
+      <td>{{ product.salePrice | currency }}</td>
+      <td>{{ product.Category }}</td>
+      <td>{{ product.weight }}</td>
+      <td>{{ product.Description }}</td>
       <td>
         <button type="button" class="btn btn-link btn-sm btn-rounded">
           Edit
