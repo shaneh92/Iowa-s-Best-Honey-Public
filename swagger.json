@@ -52,6 +52,36 @@
           }
         }
       }
+    },
+    "/products/{id}": {
+      "delete": {
+        "tags": ["Products"],
+        "summary": "Delete product by id",
+        "description": "Delete product by id.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of product to delete",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Product document deleted"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "404": {
+            "description": "Product not found"
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
     }
   }
 }

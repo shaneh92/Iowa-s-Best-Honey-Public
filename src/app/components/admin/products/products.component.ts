@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductsService } from '../../../services/products.service';
 import { Product } from '../../../models/product-model';
+import { Observable } from 'rxjs';
+import { get } from 'http';
 
 @Component({
   selector: 'app-products',
@@ -37,5 +39,36 @@ export class ProductsComponent {
         this.isLoading = false;
       },
     });
+  }
+
+  deleteProduct(id: string) {
+    // Confirm the deletion for the user
+    if (!confirm('Are you sure you want to delete this product?')) {
+      return;
+    }
+
+    if (!id) {
+      throw new Error('A valid Product ID is required');
+    }
+    console.log('Deleting product with ID:', id);
+    this.productsService.deleteProduct(id).subscribe({
+      next: () => {
+        this.successMessage = 'Product deleted successfully';
+        this.hideAlert();
+      },
+      error: (err) => {
+        console.log('err', err);
+        this.errorMessage = err.message;
+        this.hideAlert();
+      },
+    });
+  }
+
+  // this will have an alert message for 3 seconds
+  hideAlert() {
+    setTimeout(() => {
+      this.errorMessage = '';
+      this.successMessage = '';
+    }, 3000);
   }
 }

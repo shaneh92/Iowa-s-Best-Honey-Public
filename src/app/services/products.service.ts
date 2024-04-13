@@ -10,4 +10,7 @@ export class ProductsService {
   getProducts() {
     return this.http.get('/products');
   }
+  deleteProduct(id: string) {
+    return this.http.delete(`/products/${id}`);
+  }
 }

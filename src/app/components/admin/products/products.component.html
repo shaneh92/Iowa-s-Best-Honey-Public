@@ -1,3 +1,21 @@
+<!-- error/success messages -->
+<div class="row justify-content-center pt-4">
+  <div class="col-sm-10 col-md-8 col-lg-6">
+    <div *ngIf="errorMessage">
+      <div class="alert alert-danger" role="alert">
+        {{ errorMessage }}
+      </div>
+    </div>
+
+    <div *ngIf="successMessage">
+      <div class="alert alert-success" role="alert">
+        {{ successMessage }}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end error messages -->
+
 <div class="text-center" *ngIf="isLoading">
   <div class="spinner-border" role="status">
     <span class="visually-hidden">Loading...</span>
@@ -9,6 +27,7 @@
       <th>Name</th>
       <th>Original Price</th>
       <th>Sale Price</th>
+      <th>Quantity</th>
       <th>Category</th>
       <th>Weight</th>
       <th>Description</th>
@@ -34,6 +53,7 @@
         <p class="fw-normal mb-1">{{ product.originalPrice | currency }}</p>
       </td>
       <td>{{ product.salePrice | currency }}</td>
+      <td>{{ product.quantity }}</td>
       <td>{{ product.category }}</td>
       <td>{{ product.weight }}</td>
       <td>{{ product.description }}</td>
@@ -41,7 +61,11 @@
         <button type="button" class="btn btn-link btn-sm btn-rounded">
           Edit
         </button>
-        <button type="button" class="btn btn-link btn-sm btn-rounded">
+        <button
+          type="button"
+          (click)="deleteProduct(product.id)"
+          class="btn btn-link btn-sm btn-rounded"
+        >
           Delete
         </button>
       </td>
