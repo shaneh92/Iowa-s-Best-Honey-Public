@@ -4,6 +4,8 @@ import { ProductsService } from '../../../services/products.service';
 import { Product } from '../../../models/product-model';
 import { Observable } from 'rxjs';
 import { get } from 'http';
+import { MdbModalRef, MdbModalService } from 'mdb-angular-ui-kit/modal';
+import { ProductsCreateComponent } from './products-create/products-create.component';
 
 @Component({
   selector: 'app-products',
@@ -15,10 +17,12 @@ export class ProductsComponent {
   successMessage: string;
   errorMessage: string;
   isLoading: boolean;
+  modalRef: MdbModalRef<ProductsCreateComponent> | null = null;
 
   constructor(
     private productsService: ProductsService,
-    private router: Router
+    private router: Router,
+    private modalService: MdbModalService
   ) {
     this.products = [];
     this.successMessage = '';
@@ -93,5 +97,10 @@ export class ProductsComponent {
       this.errorMessage = '';
       this.successMessage = '';
     }, 3000);
+  }
+  openModal() {
+    this.modalRef = this.modalService.open(ProductsCreateComponent, {
+      modalClass: 'modal-lg',
+    });
   }
 }
