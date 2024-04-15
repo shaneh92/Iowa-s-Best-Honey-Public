@@ -17,6 +17,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { UsersComponent } from './components/admin/users/users.component';
 import { ProductsComponent } from './components/admin/products/products.component';
 import { OrdersComponent } from './components/admin/orders/orders.component';
+import { ProductsCreateComponent } from './components/admin/products/products-create/products-create.component';
 
 // MDB Modules
 import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
@@ -48,6 +49,7 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
     UsersComponent,
     ProductsComponent,
     OrdersComponent,
+    ProductsCreateComponent,
   ],
   imports: [
     BrowserModule,

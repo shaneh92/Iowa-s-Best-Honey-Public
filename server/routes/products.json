@@ -1,19 +1,21 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "name": "Honey 8oz",
     "originalPrice": 10.99,
     "salePrice": 8.99,
+    "quantity": 15,
     "category": "honey",
     "weight": 8,
     "description": "This is a jar of 8oz honey.",
     "image": "../assets/iowabesthoney.jpg"
   },
   {
-    "id": 2,
+    "id": "2",
     "name": "Honey 12oz",
     "originalPrice": 10.99,
     "salePrice": 8.99,
+    "quantity": 15,
     "category": "honey",
     "weight": 12,
     "description": "This is a jar of 12oz honey.",

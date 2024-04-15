@@ -41,6 +41,28 @@ export class ProductsComponent {
     });
   }
 
+  ngOnInit() {
+    this.fetchProducts();
+  }
+
+  fetchProducts() {
+    this.isLoading = true;
+    this.productsService.getProducts().subscribe({
+      next: (products: any) => {
+        this.products = products;
+        console.log('Products:', this.products);
+        this.isLoading = false;
+      },
+      error: (error) => {
+        this.errorMessage = error.message;
+        this.isLoading = false;
+      },
+      complete: () => {
+        this.isLoading = false;
+      },
+    });
+  }
+
   deleteProduct(id: string) {
     // Confirm the deletion for the user
     if (!confirm('Are you sure you want to delete this product?')) {
@@ -54,6 +76,7 @@ export class ProductsComponent {
     this.productsService.deleteProduct(id).subscribe({
       next: () => {
         this.successMessage = 'Product deleted successfully';
+        this.fetchProducts();
         this.hideAlert();
       },
       error: (err) => {
